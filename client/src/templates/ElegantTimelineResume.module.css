@@ -1,0 +1,184 @@
+.resume {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light {
+    background-color: #ffffff;
+    color: #222;
+}
+
+.dark {
+    background-color: #111;
+    color: #eee;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: inherit;
+}
+
+.personalInfoList {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.personalInfoItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Summary */
+.summary {
+    margin-bottom: 2rem;
+}
+
+.summary h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 0.25rem;
+}
+
+/* Timeline Layout (Experience, Education, Projects) */
+.experience,
+.education,
+.project {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.experienceList,
+.educationList,
+.projectList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 3px solid #888;
+}
+
+.experienceItem,
+.educationItem,
+.projectItem {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.experienceItem::before,
+.educationItem::before,
+.projectItem::before {
+    content: '';
+    position: absolute;
+    left: -11px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: currentColor;
+    border-radius: 50%;
+}
+
+.experienceInfo,
+.educationInfo,
+.projectInfo {
+    padding: 0.5rem 0;
+}
+
+.experienceMeta,
+.educationMeta {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0.25rem 0;
+}
+
+.experienceRespList,
+.educationDescList,
+.projectDescList {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.experienceRespItem::before,
+.educationDescItem::before,
+.projectDescItem::before {
+    content: "•";
+    margin-right: 0.5rem;
+    color: inherit;
+}
+
+.experienceRespItem,
+.educationDescItem,
+.projectDescItem {
+    margin-bottom: 0.25rem;
+}
+
+/* Skills */
+.skills {
+    margin-bottom: 2rem;
+}
+
+.skills h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.skillList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.skillItem {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Certification */
+.certification h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.certificationList {
+    list-style: none;
+    padding: 0;
+}
+
+.certificationItem {
+    margin-bottom: 1.5rem;
+}
+
+.certificationInfo h3 {
+    margin: 0;
+}
+
+.certificationInfo p {
+    margin: 0.2rem 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}

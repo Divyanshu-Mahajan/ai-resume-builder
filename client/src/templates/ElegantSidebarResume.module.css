@@ -1,0 +1,154 @@
+/* === Root resume container === */
+.resume {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === Light / Dark themes === */
+.light {
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+.dark {
+    background-color: #1c1c1c;
+    color: #f1f1f1;
+}
+
+/* === Sidebar Styles === */
+.sidebar {
+    width: 280px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.header p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.personalInfo {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.skills ul,
+.certification ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skillItem,
+.certificationItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+}
+
+.certificationInfo a {
+    font-size: 0.85rem;
+    color: #add8e6;
+    text-decoration: underline;
+    word-break: break-word;
+}
+
+/* === Main Content === */
+.mainContent {
+    flex: 1;
+    padding: 2rem;
+    background-color: inherit;
+}
+
+.mainContent h2 {
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.summary p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.experienceList,
+.educationList,
+.projectList {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.experienceItem,
+.educationItem,
+.projectItem {
+    margin-bottom: 1.2rem;
+}
+
+.experienceItem p,
+.educationInfo p,
+.projectInfo p {
+    margin: 0.2rem 0;
+}
+
+.experienceRespList,
+.educationDescList,
+.projectDescList {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.experienceRespItem,
+.educationDescItem,
+.projectDescItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 0.4rem;
+}
+
+.projectInfo a {
+    font-size: 0.85rem;
+    color: #2e86de;
+    text-decoration: underline;
+    word-break: break-word;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .resume {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    .mainContent {
+        padding: 1.2rem;
+    }
+}

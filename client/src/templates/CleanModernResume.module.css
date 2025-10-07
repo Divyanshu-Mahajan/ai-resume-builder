@@ -1,0 +1,200 @@
+.resume {
+    padding: 2rem;
+    background-color: var(--card-bg);
+    color: var(--text);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--input-border);
+    padding-bottom: 1rem;
+}
+
+.name {
+    font-size: 28px;
+    margin: 0 0 5px 0;
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.title {
+    font-size: 18px;
+    color: var(--primary);
+    /* highlight title for contrast */
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Contact Info */
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 12px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text);
+    opacity: 0.9;
+}
+
+.icon {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+    color: var(--icon-color);
+}
+
+/* Section Common */
+.section {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.sectionTitle {
+    font-size: 18px;
+    color: var(--primary);
+    /* colored for clarity */
+    border-bottom: 1px solid var(--input-border);
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.summaryText {
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+/* Skills & Tags */
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skillTag {
+    background-color: var(--input-bg);
+    color: var(--text);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Experience, Education, Projects */
+.experienceItem,
+.educationItem,
+.projectItem {
+    margin-bottom: 1.2rem;
+}
+
+.jobHeader,
+.projectHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+}
+
+.jobTitle,
+.projectTitle,
+.degree {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    color: var(--text);
+}
+
+.company,
+.university {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text);
+    opacity: 0.9;
+}
+
+.duration,
+.educationDetails,
+.techStack {
+    color: var(--text);
+    font-size: 13px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Responsibilities list */
+.responsibilities {
+    margin: 8px 0 0 20px;
+    padding: 0;
+}
+
+.responsibilityItem {
+    font-size: 14px;
+    margin-bottom: 6px;
+    position: relative;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.responsibilityItem::before {
+    content: "•";
+    position: absolute;
+    left: -14px;
+    color: var(--primary);
+    /* use primary for bullets */
+    font-weight: bold;
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* =====================
+   Dark Theme Fixes
+   ===================== */
+[data-theme='dark'] .resume {
+    background-color: var(--card-bg);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme='dark'] .company,
+[data-theme='dark'] .university,
+[data-theme='dark'] .duration,
+[data-theme='dark'] .educationDetails,
+[data-theme='dark'] .techStack {
+    opacity: 1;
+    /* remove faded look in dark mode */
+}
+
+[data-theme='dark'] .skillTag {
+    background-color: #334155;
+    /* better contrast */
+    color: var(--text);
+}
+
+[data-theme='dark'] .responsibilityItem {
+    color: var(--text);
+    opacity: 1;
+    /* keep readable */
+}

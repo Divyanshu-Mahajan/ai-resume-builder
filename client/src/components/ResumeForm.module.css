@@ -1,0 +1,243 @@
+.resumeForm {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.toggleBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--icon-color);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.formPersonalInfo,
+.summaryInfo,
+.educationInfo,
+.experienceInfo,
+.skillsInfo,
+.projectsInfo,
+.certificationInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nameField,
+.emailField,
+.phoneField,
+.addressField,
+.linkedinField,
+.field,
+.summary,
+.education,
+.experience,
+.skills,
+.project,
+.certification {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 600;
+    align-self: flex-start;
+    color: var(--text);
+}
+
+input,
+textarea {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--input-border);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--text);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background: var(--button-bg);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Array Item Containers */
+.descriptionItem,
+.responsibilityItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.descriptionItem input,
+.responsibilityItem input {
+    flex-grow: 1;
+}
+
+/* Add/Remove Buttons */
+.addDescriptionBtn,
+.addResponsibilityBtn {
+    background: var(--button-secondary-bg);
+    color: var(--button-secondary-text);
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+.removeDescriptionBtn,
+.removeResponsibilityBtn {
+    background: none;
+    border: none;
+    color: var(--error);
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+/* List Styles */
+.descriptionList,
+.responsibilitiesList,
+.descriptionsList {
+    margin: 0.5rem 0 0 1rem;
+    padding-left: 1rem;
+    list-style-type: disc;
+}
+
+.descriptionList li,
+.responsibilitiesList li,
+.descriptionsList li {
+    margin-bottom: 0.3rem;
+    color: var(--text-secondary);
+}
+
+.deleteBtn {
+    background: transparent;
+    color: var(--error);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.educationItem,
+.experienceItem,
+.skillItem,
+.projectItem,
+.certificationItem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    word-break: break-word;
+}
+
+.educationItem>div,
+.experienceItem>div,
+.projectItem>div,
+.certificationItem>div {
+    flex-grow: 1;
+}
+
+.button {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.error {
+    color: var(--error);
+    font-size: 0.875rem;
+}
+
+/* Link Styles */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .resumeForm {
+        padding: 1rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        gap: 1.5rem;
+    }
+
+    input,
+    textarea {
+        font-size: 0.95rem;
+    }
+
+    .button {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .educationItem,
+    .experienceItem,
+    .projectItem,
+    .certificationItem {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .deleteBtn {
+        align-self: flex-end;
+    }
+}

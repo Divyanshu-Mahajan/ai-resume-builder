@@ -1,0 +1,128 @@
+/* Dashboard.module.css */
+
+.heroContent {
+    padding: 2rem;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.subHeading {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--text);
+    opacity: 0.85;
+}
+
+/* Quick Stats Section */
+.QuickStatsCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.QuickStatsCardSection {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.QuickStatsCardSection:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.QuickStatsCardSection h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.QuickStatsCardSection p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Recent Resume Section */
+.recentResume {
+    margin-bottom: 2rem;
+}
+
+.recentResume h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.recentResumeSection {
+    background: var(--card-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 0.8rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.3s;
+}
+
+.recentResumeSection:hover {
+    border-color: var(--primary);
+}
+
+.recentResumeSection h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    color: var(--primary);
+}
+
+.recentResumeSection p {
+    font-size: 0.95rem;
+    margin: 0.2rem 0;
+    color: var(--text);
+}
+
+/* Add Resume Button */
+.addResumeBtn {
+    display: flex;
+    align-items: center;
+    background: var(--button-bg);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: opacity 0.3s, transform 0.2s;
+    margin-top: 1rem;
+}
+
+.addResumeBtn:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+/* Dark / Light mode helpers */
+.dark {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.light {
+    background: var(--bg);
+    color: var(--text);
+}

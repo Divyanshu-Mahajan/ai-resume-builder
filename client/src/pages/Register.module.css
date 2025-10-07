@@ -1,0 +1,240 @@
+/* .container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+} */
+
+.container{
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.themeToggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.themeToggle:hover {
+  color: var(--primary);
+}
+
+
+/* --- Left Panel --- */
+.leftPanel {
+    flex: 1;
+    background: linear-gradient(to bottom right, #4f46e5, #3b82f6);
+    color: white;
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+
+.leftImage {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    transition: transform 0.4s ease;
+}
+
+.leftImage:hover {
+    transform: scale(1.05);
+}
+
+.heroTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    max-width: 440px;
+    opacity: 0.95;
+}
+
+/* --- Right Panel --- */
+.rightPanel {
+    flex: 1;
+    /* background-color: #f1f5f9; */
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+/* --- Signup Form --- */
+.form {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 0.25rem;
+    text-align: left;
+}
+
+.input {
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #cbd5e1;
+    font-size: 1rem;
+    background-color: #f8fafc;
+    transition: all 0.2s ease-in-out;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    background-color: #ffffff;
+}
+
+.passwordWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    height: 44px;
+    /* Match other input height */
+    padding-right: 2.5rem;
+}
+
+.passwordWrapper:focus-within {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    background-color: #ffffff;
+}
+
+/* Password input inside the wrapper */
+.passwordWrapper input {
+    flex: 1;
+    border: none !important;
+    outline: none !important;
+    font-size: 1rem;
+    background: transparent;
+    padding: 0 1rem;
+    height: 100%;
+    box-shadow: none !important;
+}
+
+.toggleBtn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #4f46e5;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Button --- */
+.button {
+    background: linear-gradient(to right, #6366f1, #4f46e5);
+    color: white;
+    font-weight: bold;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+/* --- Error Message --- */
+.error {
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin-top: -0.25rem;
+    margin-bottom: -0.25rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .leftPanel {
+        display: none;
+    }
+
+    .rightPanel {
+        flex: none;
+        padding: 2rem;
+    }
+
+    .form {
+        padding: 2rem;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .passwordWrapper {
+        padding-right: 2.5rem;
+    }
+
+    .toggleBtn {
+        font-size: 1rem;
+        right: 12px;
+    }
+}

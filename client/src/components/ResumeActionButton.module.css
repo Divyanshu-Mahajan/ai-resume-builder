@@ -1,0 +1,52 @@
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.actions button {
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #007bff;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.actions button:hover {
+    background: #0056b3;
+    box-shadow: 0 6px 14px rgba(0, 123, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.actions button:active {
+    transform: scale(0.97);
+}
+
+/* Secondary button style (like Edit) */
+.actions button:first-child {
+    background: #6c757d;
+    box-shadow: 0 4px 10px rgba(108, 117, 125, 0.2);
+}
+
+.actions button:first-child:hover {
+    background: #545b62;
+    box-shadow: 0 6px 14px rgba(108, 117, 125, 0.3);
+}
+
+/* Dark mode */
+.dark .actions button {
+    background: #2d2d2d;
+    color: #f1f1f1;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+.dark .actions button:hover {
+    background: #3d3d3d;
+}

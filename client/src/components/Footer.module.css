@@ -1,0 +1,90 @@
+.footer {
+    background-color: var(--input-bg);
+    color: var(--text);
+    padding: 3rem 2rem 1rem;
+    border-top: 1px solid var(--input-border);
+}
+
+.footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    flex: 1;
+    min-width: 220px;
+}
+
+.section h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section h5 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.section p,
+.section li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.section li::marker,
+.section li::before {
+  content: none;
+}
+
+.section ul li a:hover {
+    color: var(--primary);
+}
+
+.socials a {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: var(--primary);
+}
+
+.footerBottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--input-border);
+    margin-top: 2rem;
+    color: var(--text);
+}
+
+@media (max-width: 768px) {
+    .footerContent {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+}

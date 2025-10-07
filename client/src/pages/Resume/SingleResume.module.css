@@ -1,0 +1,42 @@
+.singleResumeWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.resumePDFContainer {
+    width: 794px;
+    /* A4 width in px */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* Allow height to expand naturally for multi-page */
+    min-height: auto;
+    max-width: 100%;
+}
+
+.resumePDFContainer section {
+    page-break-inside: avoid;
+    /* prevent sections from splitting across pages */
+}
+
+.downloadButtonWrapper {
+    margin-top: 20px;
+}
+
+.downloadBtn {
+    background-color: #4f46e5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.downloadBtn:hover {
+    background-color: #3730a3;
+}

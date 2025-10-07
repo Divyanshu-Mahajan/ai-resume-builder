@@ -1,0 +1,297 @@
+/* Container Styling */
+.resumeContainer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Theme Styles */
+.light {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+.dark {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+}
+
+.dark .headerContainer {
+    border-bottom: 2px solid #333;
+}
+
+.dark .headerContainer p,
+.dark .headerContainer li {
+    color: #ccc;
+}
+
+.dark .rightSection h2 {
+    border-bottom: 1px solid #444;
+}
+
+.dark .personalData svg,
+.dark .projectDescItem::before {
+    color: #4aa8ff;
+}
+
+.dark .SkillItem svg,
+.dark .ExperienceRespItem svg {
+    color: #4aa8ff;
+}
+
+/* Header */
+.headerContainer {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.headerContainer h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.headerContainer p {
+    margin: 0.2rem 0 0.6rem;
+    font-style: italic;
+    color: #888;
+}
+
+.headerContainer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.headerContainer li {
+    color: #555;
+}
+
+/* Main Grid Layout */
+.mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+/* Left Section */
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.personalData p {
+    display: flex;
+    align-items: center;
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.personalData svg {
+    margin-right: 0.5rem;
+    color: #0073e6;
+}
+
+/* Skills */
+.skils {
+    margin-top: 1rem;
+}
+
+.skils h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+}
+
+.skils h2 svg {
+    margin-right: 0.5rem;
+}
+
+.skillList {
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.SkillItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.SkillItem svg {
+    margin-right: 0.4rem;
+    font-size: 0.5rem;
+    color: #0073e6;
+}
+
+/* Certifications */
+.certification h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+}
+
+.certification h2 svg {
+    margin-right: 0.5rem;
+}
+
+.certificationList {
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.certificationItem {
+    margin-bottom: 1rem;
+}
+
+.certificationInfo p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+/* Right Section */
+.rightSection section {
+    margin-bottom: 2rem;
+}
+
+.rightSection h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.3rem;
+}
+
+.rightSection h2 svg {
+    margin-right: 0.5rem;
+}
+
+/* Summary */
+.summary p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Experience */
+.experienceList {
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.experienceItem {
+    margin-bottom: 1.5rem;
+}
+
+.experienceItem p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.experienceItem p strong {
+    font-weight: 600;
+    margin-right: 0.4rem;
+}
+
+.experienceRespList {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.ExperienceRespItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.ExperienceRespItem svg {
+    margin-right: 0.5rem;
+    font-size: 0.5rem;
+    margin-top: 0.3rem;
+    color: #0073e6;
+}
+
+/* Education */
+.educationList {
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.educationItem {
+    margin-bottom: 1.5rem;
+}
+
+.educationInfo p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.educationInfo p strong {
+    font-weight: 600;
+    margin-right: 0.4rem;
+}
+
+/* Projects */
+.projectList {
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.projectItem {
+    margin-bottom: 1.5rem;
+}
+
+.projectInfo p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.projectDescList {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.projectDescItem {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.projectDescItem::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0073e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mainContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .headerContainer ul {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}

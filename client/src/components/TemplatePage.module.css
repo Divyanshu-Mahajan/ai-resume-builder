@@ -1,0 +1,12 @@
+.templatePage {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: var(--page-bg, #f0f2f5);
+    transition: background 0.3s ease;
+}
+
+.dark .templatePage {
+    --page-bg: #181818;
+}

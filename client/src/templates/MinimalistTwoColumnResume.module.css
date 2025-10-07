@@ -1,0 +1,161 @@
+/* =====================
+   Theme Base
+===================== */
+.resume {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Theme */
+.light {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/* Dark Theme */
+.dark {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+/* =====================
+   Header
+===================== */
+.header {
+    text-align: center;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* =====================
+   Main Layout
+===================== */
+.mainContent {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.leftSection {
+    border-right: 1px solid currentColor;
+    padding-right: 1rem;
+}
+
+.rightSection {
+    padding-left: 1rem;
+}
+
+/* =====================
+   Personal Info
+===================== */
+.personalData {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.personalInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    word-break: break-word;
+}
+
+/* =====================
+   Section Titles
+===================== */
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 0.2rem;
+}
+
+/* =====================
+   Lists
+===================== */
+.educationList,
+.certificationList,
+.experienceList,
+.projectList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.educationItem,
+.certificationItem,
+.experienceItem,
+.projectItem {
+    margin-bottom: 1rem;
+}
+
+.educationInfo,
+.certificationInfo,
+.experienceInfo,
+.projectInfo {
+    padding-left: 0.5rem;
+}
+
+.educationDescList,
+.experienceDescList,
+.projectDescList {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.educationDescItem,
+.experienceDescItem,
+.projectDescItem {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* =====================
+   Summary Section
+===================== */
+.summary {
+    margin-bottom: 2rem;
+}
+
+/* =====================
+   Projects
+===================== */
+.projects h3 {
+    margin: 0 0 0.3rem;
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 768px) {
+    .mainContent {
+        grid-template-columns: 1fr;
+    }
+
+    .leftSection {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid currentColor;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .rightSection {
+        padding-left: 0;
+    }
+}
