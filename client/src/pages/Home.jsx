@@ -23,7 +23,7 @@ const Home = () => {
                     <div className={classes.leftContent}>
                         <h3>Build Your Dream Resume in Seconds with AI</h3>
                         <p>Professional, customizable, and recruiter-approved resumes using our intelligent builder</p>
-                        <Link to="/sign-up">Get Started</Link>
+                        <Link to="/register">Get Started</Link>
                     </div>
                     <div className={classes.rightContent}>
                         <img src={HeroImage} alt="Resume Logo" />
