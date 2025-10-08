@@ -112,7 +112,7 @@ const Testimonials = () => {
 
     const navigate = useNavigate();
     const getStartedHandler = () => {
-        navigate("/sign-up")
+        navigate("/register")
     }
     return (
         <section className={classes.testimonials} id="testimonials">
