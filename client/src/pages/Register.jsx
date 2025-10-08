@@ -52,7 +52,7 @@ const passwordReducer = (state, action) => {
 const Register = () => {
     const navigate = useNavigate();
     const dispatchRedux = useDispatch();
-    const { loading } = useSelector(state => state?.auth);
+    const { loading,error } = useSelector(state => state?.auth);
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -72,6 +72,14 @@ const Register = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
         return localStorage.getItem('theme') === 'dark';
     });
+
+    const [register, setRegister] = useState(false);
+
+    useEffect(()=> {
+        if(register && !loading && !error){
+            navigate("/login");
+        }
+    }, [register, loading. error]);
 
 
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -127,7 +135,9 @@ const Register = () => {
             ).unwrap();
 
             toast.success("Registration successful! Redirecting to login...");
-            setTimeout(() => navigate("/login"), 2000);
+            console.log("Navigate to /Login");
+            // setTimeout(() => navigate("/login"), 2000);
+           setRegister(true);
 
             setFirstName("");
             setLastName("");

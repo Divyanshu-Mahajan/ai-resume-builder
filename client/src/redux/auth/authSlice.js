@@ -68,9 +68,15 @@ export const logoutUser = createAsyncThunk(
                     Authorization: `Bearer ${accessToken}`
                 }
             })
+
+            // There are Changes
+            localStorage.removeItem("accessToken");
+            localStorage.removeItem("user");
             const data = await res.json();
             return data;
         } catch (error) {
+            localStorage.removeItem("accessToken");
+            localStorage.removeItem("user");
             return rejectWithValue(error.message || "Something went wrong during logout")
         }
     }
@@ -122,7 +128,10 @@ const authSlice = createSlice({
             })
             .addCase(registerUser.fulfilled, (state, action) => {
                 state.loading = false;
-                // Optionally, you can auto-login after register by setting user & token
+                state.user = null;
+                state.token = null;
+                state.isAuthenticated = false;
+                state.error = null;
             })
             .addCase(registerUser.rejected, (state, action) => {
                 state.loading = false;
