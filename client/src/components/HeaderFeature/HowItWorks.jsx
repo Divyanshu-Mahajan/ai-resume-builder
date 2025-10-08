@@ -63,7 +63,7 @@ const HowItWorks = () => {
 
     const navigate = useNavigate();
     const getStartedHandler = () => {
-        navigate("/sign-up");
+        navigate("/register");
     }
     return (
         <section className={classes.howItWorks} id="how-it-works">
