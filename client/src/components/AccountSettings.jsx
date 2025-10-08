@@ -79,6 +79,7 @@ const AccountSettings = () => {
     const darkMode = useSelector(state => state?.theme?.darkMode);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    
 
     const [activeSection, setActiveSection] = useState('profile');
     const [isEditing, setIsEditing] = useState(false);
@@ -127,7 +128,12 @@ const AccountSettings = () => {
 
     const handleLogout = async () => {
         try {
-            await dispatch(logoutUser()).unwrap();
+            await dispatch(logoutUser())
+                .unwrap()
+                .finally(() => {
+                    localStorage.removeItem("accessToken");
+                    localStorage.removeItem("user");
+                });
             // Navigation is handled by the useEffect above
         } catch (error) {
             console.error('Logout error:', error);
