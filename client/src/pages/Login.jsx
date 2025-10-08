@@ -52,7 +52,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const dispatchRedux = useDispatch();
-    const { loading,isAuthenticated} = useSelector(state => state?.auth);
+    const { loading, isAuthenticated } = useSelector(state => state?.auth);
 
     const [loginEmailState, dispatchLoginEmail] = useReducer(loginEmailReducer, {
         value: '',
@@ -138,6 +138,11 @@ const Login = () => {
         })
     }
 
+    //Reset the login value
+    useEffect(() => {
+        dispatchLoginEmail({ type: 'RESET' });
+        dispatchLoginPassword({ type: 'RESET' });
+    }, []);
 
     return (
         <div className={classes.heroContent}>
@@ -158,7 +163,8 @@ const Login = () => {
                         id='email'
                         value={loginEmailState.value}
                         onChange={emailChangeHandler}
-                        onBlur={emailBlurHandler} />
+                        onBlur={emailBlurHandler}
+                        autoComplete='off' />
 
                     {!loginEmailState.isValid && loginEmailState.isTouched && (
                         <p className={classes.error}>Please enter a valid email</p>
@@ -171,7 +177,8 @@ const Login = () => {
                         id='password'
                         value={loginPasswordState.value}
                         onChange={passwordChangeHandler}
-                        onBlur={passwordBlurHandler} />
+                        onBlur={passwordBlurHandler}
+                        autoComplete='new-password' />
 
                     {!loginPasswordState.isValid && loginPasswordState.isTouched && (
                         <p className={classes.error}>Password must be at least 8 characters</p>
@@ -196,7 +203,7 @@ const Login = () => {
 
                 <div className={classes.noAccount}>
                     <p>Don't have an account?</p>
-                    <Link to="/sign-up" className={classes.signupLink}>sign up</Link>
+                    <Link to="/register" className={classes.signupLink}>sign up</Link>
                 </div>
 
             </div>
