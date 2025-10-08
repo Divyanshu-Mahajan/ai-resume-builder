@@ -60,7 +60,7 @@ const Pricing = () => {
     ];
     const navigate = useNavigate();
     const getStartedHandler = () => {
-        navigate("/sign-up");
+        navigate("/register");
     }
 
     return (
